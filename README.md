@@ -2,9 +2,9 @@
 
 This repository is part of a larger DevOps Project: 
 
-**Week 4 - GitOps-Based Kubernetes Deployment, focusing on deploying a multi-component microservices application to Kubernetes using GitOps principles.**
-
-[**Infrastructure Automation using Terraform and Ansible 🧰 ⚙️**](https://github.com/kapilkumaria/cv-challenge-04-infrastructure)  
+**Week 4 - GitOps-Based Kubernetes Deployment, focusing on automating infrastructure provisioning and configuration using Terraform and Ansible.**
+**Full Stack Application with Monitoring and Logging ⚙️ 📊 🔥**
+[**Repo Here**](https://github.com/kapilkumaria/cv-challenge-04)  
 
 ## Project Overview
 
