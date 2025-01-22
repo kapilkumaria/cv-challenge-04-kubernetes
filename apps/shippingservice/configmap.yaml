@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: shippingservice-config
+  namespace: default
+data:
+  GOTRACEBACK: "single"  # This is the environment variable value

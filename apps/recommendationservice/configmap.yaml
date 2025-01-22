@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: recommendationservice-config
+data:
+  PORT: "8080"  # Port the service listens on
+  PRODUCT_CATALOG_SERVICE_ADDR: "productcatalogservice:3550"  # Address of productcatalogservice
+  DISABLE_PROFILER: "true"  # Disable profiling
