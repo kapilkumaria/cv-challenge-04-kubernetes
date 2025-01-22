@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cartservice-config
+data:
+  DOTNET_EnableDiagnostics: "0"
+  ASPNETCORE_HTTP_PORTS: "7070"

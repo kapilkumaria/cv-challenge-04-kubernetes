@@ -5,10 +5,10 @@ metadata:
   labels:
     app: checkoutservice
 spec:
-  type: ClusterIP  # Internal service only, accessible within the cluster
+  type: ClusterIP  # Exposes the service only within the cluster
   selector:
-    app: checkoutservice
+    app: checkoutservice  # Matches the `app` label in the Deployment
   ports:
     - protocol: TCP
-      port: 5050        # Port on which this service will be accessible within the cluster
-      targetPort: 5050  # Port on the pod where the container is listening
+      port: 5050        # Port exposed on the Service (cluster-wide)
+      targetPort: 5050  # Port on the container where the app is listening

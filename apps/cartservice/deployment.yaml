@@ -23,8 +23,17 @@ spec:
             - containerPort: 7070
           env:
             - name: DOTNET_EnableDiagnostics
-              value: "0"
+              valueFrom:
+                configMapKeyRef:
+                  name: cartservice-config
+                  key: DOTNET_EnableDiagnostics
             - name: ASPNETCORE_HTTP_PORTS
-              value: "7070"
+              valueFrom:
+                configMapKeyRef:
+                  name: cartservice-config
+                  key: ASPNETCORE_HTTP_PORTS
             - name: REDIS_ADDR
-              value: "redis:6379"  # Assuming redis service is available at redis:6379
+              valueFrom:
+                secretKeyRef:
+                  name: cartservice-secrets
+                  key: REDIS_ADDR

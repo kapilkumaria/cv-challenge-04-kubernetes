@@ -1,4 +1,4 @@
-# adservice Deployment and Service combined YAML
+# adservice Deployment YAML file 
 
 apiVersion: apps/v1
 kind: Deployment
@@ -18,10 +18,27 @@ spec:
     spec:
       containers:
         - name: adservice
-          image: kappu1512/adservice:32
+          image: kappu1512/adservice:162
           ports:
             - containerPort: 9555
           env:
-            # Add environment variables if required
             - name: EXAMPLE_ENV
-              value: "example-value"
+              valueFrom:
+                configMapKeyRef:
+                  name: adservice-config
+                  key: EXAMPLE_ENV
+            - name: OTHER_CONFIG
+              valueFrom:
+                configMapKeyRef:
+                  name: adservice-config
+                  key: OTHER_CONFIG
+            - name: SECRET_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: adservice-secrets
+                  key: SECRET_KEY
+            - name: API_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: adservice-secrets
+                  key: API_TOKEN

@@ -1,0 +1,9 @@
+# ConfigMap for the adservice application
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: adservice-config
+data:
+  EXAMPLE_ENV: "example-value"
+  OTHER_CONFIG: "some-other-value"

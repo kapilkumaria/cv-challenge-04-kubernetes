@@ -1,3 +1,5 @@
+# Service definition for the adservice
+
 apiVersion: v1
 kind: Service
 metadata:
@@ -5,10 +7,10 @@ metadata:
   labels:
     app: adservice
 spec:
-  type: ClusterIP  # Internal service only, accessible within the cluster
+  type: ClusterIP
   selector:
     app: adservice
   ports:
     - protocol: TCP
-      port: 9555        # Port on which this service will be accessible within the cluster
-      targetPort: 9555  # Port on the pod where the container is listening
+      port: 9555
+      targetPort: 9555
