@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: shippingservice
-          image: kappu1512/shippingservice:8
+          image: kappu1512/shippingservice:45
           ports:
             - containerPort: 50051
           env:
