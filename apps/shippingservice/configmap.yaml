@@ -1,3 +1,5 @@
+# This is the ConfigMap resource for the shippingservice application
+
 apiVersion: v1
 kind: ConfigMap
 metadata:

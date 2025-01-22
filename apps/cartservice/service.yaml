@@ -1,3 +1,5 @@
+# This file defines a Kubernetes Service for the Cart Service
+
 apiVersion: v1
 kind: Service
 metadata:

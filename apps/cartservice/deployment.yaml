@@ -1,4 +1,4 @@
-# cartservice Deployment and Service combined YAML
+# cartservice Deployment YAML
 
 apiVersion: apps/v1
 kind: Deployment

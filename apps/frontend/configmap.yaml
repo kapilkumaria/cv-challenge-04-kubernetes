@@ -1,3 +1,5 @@
+# ConfigMap for the frontend service
+
 apiVersion: v1
 kind: ConfigMap
 metadata:

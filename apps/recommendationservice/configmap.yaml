@@ -1,3 +1,5 @@
+# ConfigMap for the RecommendationService
+
 apiVersion: v1
 kind: ConfigMap
 metadata:

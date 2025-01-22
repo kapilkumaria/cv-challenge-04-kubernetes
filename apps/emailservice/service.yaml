@@ -1,3 +1,5 @@
+# This file defines the service for the emailservice deployment
+
 apiVersion: v1
 kind: Service
 metadata:

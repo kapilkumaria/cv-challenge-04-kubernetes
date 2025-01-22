@@ -1,3 +1,5 @@
+# ConfigMap for the cartservice application
+
 apiVersion: v1
 kind: ConfigMap
 metadata:

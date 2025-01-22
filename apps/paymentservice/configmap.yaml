@@ -1,3 +1,5 @@
+# ConfigMap for the payment service
+
 apiVersion: v1
 kind: ConfigMap
 metadata:

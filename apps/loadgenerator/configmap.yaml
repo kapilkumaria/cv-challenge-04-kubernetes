@@ -1,3 +1,5 @@
+# This ConfigMap is used to configure the load generator.
+
 apiVersion: v1
 kind: ConfigMap
 metadata:

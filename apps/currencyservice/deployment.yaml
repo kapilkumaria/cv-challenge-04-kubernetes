@@ -1,3 +1,5 @@
+# Deployment file for the currencyservice application
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:

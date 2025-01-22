@@ -1,3 +1,5 @@
+# This is a Deployment that runs a load generator container. It pulls configuration values from a ConfigMap and a Secret.
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
