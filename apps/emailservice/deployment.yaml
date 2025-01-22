@@ -1,4 +1,4 @@
-# emailservice Deployment and Service combined YAML
+# emailservice Deployment YAML
 
 apiVersion: apps/v1
 kind: Deployment
@@ -23,6 +23,17 @@ spec:
             - containerPort: 8080
           env:
             - name: PYTHONUNBUFFERED
-              value: "1"
+              valueFrom:
+                configMapKeyRef:
+                  name: emailservice-config
+                  key: PYTHONUNBUFFERED
             - name: ENABLE_PROFILER
-              value: "1"
+              valueFrom:
+                configMapKeyRef:
+                  name: emailservice-config
+                  key: ENABLE_PROFILER
+            - name: API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: emailservice-secrets
+                  key: API_KEY

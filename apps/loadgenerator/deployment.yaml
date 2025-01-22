@@ -1,5 +1,3 @@
-# loadgenerator Deployment and Service combined YAML
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -20,5 +18,16 @@ spec:
         - name: loadgenerator
           image: kappu1512/loadgenerator:19
           env:
+            # Pull values from ConfigMap
             - name: GEVENT_SUPPORT
-              value: "True"
+              valueFrom:
+                configMapKeyRef:
+                  name: loadgenerator-config
+                  key: GEVENT_SUPPORT
+
+            # Pull sensitive values from Secret (if applicable)
+            - name: API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: loadgenerator-secrets
+                  key: API_KEY
