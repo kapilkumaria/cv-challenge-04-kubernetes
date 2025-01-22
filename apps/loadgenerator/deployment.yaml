@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: loadgenerator
-          image: kappu1512/loadgenerator:19
+          image: kappu1512/loadgenerator:41
           env:
             # Pull values from ConfigMap
             - name: GEVENT_SUPPORT
