@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: kappu1512/frontend:9
+          image: kappu1512/frontend:26
           ports:
             - containerPort: 8080
           env:
