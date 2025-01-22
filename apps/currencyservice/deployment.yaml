@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: currencyservice
-          image: kappu1512/currencyservice:8
+          image: kappu1512/currencyservice:34
           ports:
             - containerPort: 7000
           env:
