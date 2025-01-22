@@ -1,0 +1,30 @@
+# cartservice Deployment and Service combined YAML
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cartservice
+  labels:
+    app: cartservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cartservice
+  template:
+    metadata:
+      labels:
+        app: cartservice
+    spec:
+      containers:
+        - name: cartservice
+          image: kappu1512/cartservice:48
+          ports:
+            - containerPort: 7070
+          env:
+            - name: DOTNET_EnableDiagnostics
+              value: "0"
+            - name: ASPNETCORE_HTTP_PORTS
+              value: "7070"
+            - name: REDIS_ADDR
+              value: "redis:6379"  # Assuming redis service is available at redis:6379

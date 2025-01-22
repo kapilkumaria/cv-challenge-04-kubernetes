@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: productcatalogservice
+  labels:
+    app: productcatalogservice
+spec:
+  type: ClusterIP  # Internal service only, accessible within the cluster
+  selector:
+    app: productcatalogservice
+  ports:
+    - protocol: TCP
+      port: 3550        # Port on which this service will be accessible within the cluster
+      targetPort: 3550  # Port on the pod where the container is listening

@@ -1,0 +1,26 @@
+# productcatalogservice Deployment and Service combined YAML
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: productcatalogservice
+  labels:
+    app: productcatalogservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: productcatalogservice
+  template:
+    metadata:
+      labels:
+        app: productcatalogservice
+    spec:
+      containers:
+        - name: productcatalogservice
+          image: kappu1512/productcatalogservice:9
+          ports:
+            - containerPort: 3550
+          env:
+            - name: GOTRACEBACK
+              value: "single"  # Set the GOTRACEBACK environment variable as per Docker Compose

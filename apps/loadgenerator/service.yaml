@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: loadgenerator
+  labels:
+    app: loadgenerator
+spec:
+  type: ClusterIP  # Internal service only, accessible within the cluster
+  selector:
+    app: loadgenerator
+  ports:
+    - protocol: TCP
+      port: 8089        # Example port if loadgenerator listens on 8089 internally, change if needed
+      targetPort: 8089  # Port on the pod where the container is listening

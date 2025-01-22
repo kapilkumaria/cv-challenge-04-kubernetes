@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: checkoutservice
+  labels:
+    app: checkoutservice
+spec:
+  type: ClusterIP  # Internal service only, accessible within the cluster
+  selector:
+    app: checkoutservice
+  ports:
+    - protocol: TCP
+      port: 5050        # Port on which this service will be accessible within the cluster
+      targetPort: 5050  # Port on the pod where the container is listening

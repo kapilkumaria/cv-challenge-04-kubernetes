@@ -1,0 +1,26 @@
+# shippingservice Deployment and Service combined YAML
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shippingservice
+  labels:
+    app: shippingservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: shippingservice
+  template:
+    metadata:
+      labels:
+        app: shippingservice
+    spec:
+      containers:
+        - name: shippingservice
+          image: kappu1512/shippingservice:8
+          ports:
+            - containerPort: 50051
+          env:
+            - name: GOTRACEBACK
+              value: "single"  # Set the GOTRACEBACK environment variable as per Docker Compose
