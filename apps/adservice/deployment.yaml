@@ -1,0 +1,27 @@
+# adservice Deployment and Service combined YAML
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: adservice
+  labels:
+    app: adservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: adservice
+  template:
+    metadata:
+      labels:
+        app: adservice
+    spec:
+      containers:
+        - name: adservice
+          image: kappu1512/adservice:162
+          ports:
+            - containerPort: 9555
+          env:
+            # Add environment variables if required
+            - name: EXAMPLE_ENV
+              value: "example-value"
