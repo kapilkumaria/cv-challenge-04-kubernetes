@@ -4,6 +4,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: currencyservice
+  namespace: argocd  # Specify the namespace
   labels:
     app: currencyservice
 spec:

@@ -4,6 +4,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: emailservice-config
+  namespace: argocd  # Specify the namespace
 data:
   PYTHONUNBUFFERED: "1"
   ENABLE_PROFILER: "1"

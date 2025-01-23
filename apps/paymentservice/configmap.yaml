@@ -4,7 +4,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: paymentservice-config
-  namespace: default
+  namespace: argocd  # Specify the namespace
 data:
   PORT: "50051"
   DISABLE_PROFILER: "true"

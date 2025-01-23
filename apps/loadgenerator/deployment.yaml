@@ -4,6 +4,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: loadgenerator
+  namespace: argocd  # Specify the namespace
   labels:
     app: loadgenerator
 spec:

@@ -4,6 +4,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: cartservice-config
+  namespace: argocd  # Specify the namespace
 data:
   DOTNET_EnableDiagnostics: "0"
   ASPNETCORE_HTTP_PORTS: "7070"
